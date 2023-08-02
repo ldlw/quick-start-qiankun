@@ -1,0 +1,27 @@
+{
+  "name": "main-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "lodash": "^4.17.21",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.4.0",
+    "element-ui": "^2.15.6",
+    "vuex-persistedstate": "^4.1.0",
+    "qiankun": "2.8.0"
+  },
+  "devDependencies": {
+    "less": "^3.0.4",
+    "less-loader": "5.0.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "vue-template-compiler": "^2.6.14"
+  }
+}

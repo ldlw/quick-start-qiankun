@@ -1,0 +1,35 @@
+{
+  "name": "quick-start-qiankun",
+  "version": "1.0.0",
+  "description": "为主子应用的辅助执行脚本",
+  "main": "index.js",
+  "scripts": {
+    "subinstall": "npm-run-all --serial subinstall:*",
+    "subinstall:base": "cnpm i",
+    "subinstall:main": "cd main-app && cnpm i",
+    "subinstall:sub-app-a": "cd sub-app-a && cnpm i",
+    "subinstall:sub-app-b": "cd sub-app-b && cnpm i",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:main": "cd main-app && npm run dev",
+    "dev:sub-app-a": "cd sub-app-a && npm run dev",
+    "dev:sub-app-b": "cd sub-app-a && npm run dev",
+    "build": "npm-run-all --parallel build:*",
+    "build:main": "cd main-app && npm run build",
+    "build:sub-app-a": "cd sub-app-a && npm run build",
+    "build:sub-app-b": "cd sub-app-a && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ldlw/quick-start-qiankun.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ldlw/quick-start-qiankun/issues"
+  },
+  "homepage": "https://github.com/ldlw/quick-start-qiankun#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

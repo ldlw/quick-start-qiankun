@@ -23,7 +23,9 @@ export default {
   mounted () {
     if (!window.qiankunStarted1) {
       window.qiankunStarted1 = true
-      initMicroApp()
+      this.$nextTick(() => {
+        document.querySelector('#child-container1') && initMicroApp()
+      })
     }
   },
   watch: {

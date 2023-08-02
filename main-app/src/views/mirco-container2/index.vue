@@ -36,11 +36,11 @@ export default {
 
   },
   mounted () {
-    console.log(1111);
     if (!window.qiankunStarted2) {
       window.qiankunStarted2= true
-      console.log(2222);
-      initMicroApp()
+      this.$nextTick(() => {
+        document.querySelector('#child-container2') && initMicroApp()
+      })
     }
   },
   methods: {

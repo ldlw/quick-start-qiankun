@@ -14,8 +14,6 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import {  } from 'vuex'
-import { storeInstance } from '@/store'
 import Skeleton from '@/components/skeleton.vue'
 import { initMicroApp } from '@/micro-app'
 export default {
@@ -38,8 +36,10 @@ export default {
 
   },
   mounted () {
+    console.log(1111);
     if (!window.qiankunStarted2) {
       window.qiankunStarted2= true
+      console.log(2222);
       initMicroApp()
     }
   },

@@ -9,19 +9,18 @@ const microAppsList = [
   {
     name: 'subPageA',
     entry: process.env.VUE_APP_SUB_LOAN,
-    container: '#child-container1',
     activeRule: getActiveRule('#/subPageA')
   },
   {
     name: 'subPageB',
     entry: process.env.VUE_APP_SUB_SUPPLY,
-    container: '#child-container2',
     activeRule: getActiveRule('#/subPageB')
   }
 ]
 
 const microApps = microAppsList.map(item => ({
   ...item,
+  container: '#child-container',
   props: {
     initStoreData: store.state,
     postMessage: onMessage,
@@ -34,8 +33,8 @@ const microApps = microAppsList.map(item => ({
 
 export const initMicroApp = () => {
   registerMicroApps(microApps)
-  start({
-    sandbox: false,
-    prefetch: false
-  })
+  // 换到App.vue了
+  // start({
+  //   sandbox: false,
+  // })
 }

@@ -2,7 +2,7 @@ import store from '@/store'
 import { vueInstance } from '@/main'
 import router from '@/router'
 
-function toSubA () {
+function toSubA1 () {
   history.pushState(null, null, '/#/subPageA')
 }
 
@@ -15,7 +15,7 @@ function toSubB () {
 }
 
 const eventMap = {
-  TO_SUB_A: toSubA,
+  TO_SUB_A1: toSubA1,
   TO_SUB_A2: toSubA2,
   TO_SUB_B: toSubB
 }

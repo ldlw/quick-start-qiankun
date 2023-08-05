@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <div class="test-block">
-      <h5>sub-page-a导航块</h5>
-      <button @click="handleJump">去子应用b</button>
-      <h6>sub-page-a的子路由</h6>
-    </div>
     <router-view/>
   </div>
 </template>
@@ -21,9 +16,6 @@ export default {
   mounted() {
   },
   methods: {
-    handleJump() {
-      this.$postMessage({ type: 'TO_SUB_B' })
-    }
   }
 }
 </script>
@@ -47,9 +39,5 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
-}
-.test-block {
-  background-color: pink;
-  margin-bottom: 20px;
 }
 </style>
